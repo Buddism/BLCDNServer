@@ -1,11 +1,12 @@
 ﻿using ICSharpCode.SharpZipLib.BZip2;
+using System.Runtime.CompilerServices;
 
 namespace BLCDNParser;
 static class CDNCacheParser
 {
 	public static void Main(string[] input)
 	{
-		if(input.Length == 0)
+		if (input.Length == 0)
 		{
 			Console.WriteLine("did not recieve an input cache.db");
 			Console.ReadLine();
@@ -22,6 +23,11 @@ static class CDNCacheParser
 			return;
 		}
 
+		string? executableDirectory = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) ?? "";
+		executableDirectory += "\\";
+
+		//create the blobs in the folder with the executable
+		System.IO.Directory.SetCurrentDirectory(executableDirectory);
 		System.IO.Directory.CreateDirectory("blobs");
 
 		int badCompressionCount = 0;
