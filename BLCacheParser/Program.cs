@@ -1,5 +1,4 @@
 ﻿using ICSharpCode.SharpZipLib.BZip2;
-using System.Runtime.CompilerServices;
 
 namespace BLCDNParser;
 static class CDNCacheParser
@@ -18,7 +17,7 @@ static class CDNCacheParser
 		Cache cache = new(file);
 		if(!cache.openedSuccessfully)
 		{
-			Console.WriteLine("did not recieve an input cache.db");
+			Console.WriteLine("not a valid sqlite database?");
 			Console.ReadLine();
 			return;
 		}
