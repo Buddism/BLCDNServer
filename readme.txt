@@ -1,3 +1,6 @@
+publish/  contains prebuilt executables
+BLCacheParser/ and BLFileServer/ contain source code
+
 BLFileServer: 
 	hosts the file server binding on the ip and port in appsettings.json, 0.0.0.0 is ALL bindable ips
 	need to port forward the port 5022 or the one you set in appsettings.json
