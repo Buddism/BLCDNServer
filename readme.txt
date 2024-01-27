@@ -1,4 +1,4 @@
-prebuilt executables are contained [here](https://github.com/Buddism/BLCDNServer/releases)
+prebuilt executables are contained https://github.com/Buddism/BLCDNServer/releases
 BLCacheParser/ and BLFileServer/ contain source code
 
 BLFileServer: 
