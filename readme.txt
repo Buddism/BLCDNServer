@@ -1,4 +1,4 @@
-publish/  contains prebuilt executables
+prebuilt executables are contained [here](https://github.com/Buddism/BLCDNServer/releases)
 BLCacheParser/ and BLFileServer/ contain source code
 
 BLFileServer: 
