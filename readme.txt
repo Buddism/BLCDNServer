@@ -3,7 +3,8 @@ BLCacheParser/ and BLFileServer/ contain source code
 
 BLFileServer: 
 	hosts the file server binding on the ip and port in appsettings.json, 0.0.0.0 is ALL bindable ips
-	need to port forward the port 5022 or the one you set in appsettings.json
+	need to port forward the port 28000 (OR THE ONE BL USES) (BOTH TCP+UDP) or the one you set in appsettings.json
+	if players can join your server without you port forwarding you might not need to port forward (blocklands UPNP opens both TCP and UDP)
 
 BLCacheParser:
 	converts a cache.db into a folder (blobs/) full of the compressed .bz2 format (the format bl uses for cdn) of each file in the cache
@@ -18,6 +19,6 @@ at the top of [Support_CustomCDN/server.cs] fill in your ip address and port, an
 $CustomCDN::CDN_to_clients = "serversPublicIpAddress:port/blobs";
 
 example:
-	$CustomCDN::CDN_to_clients = "123.123.12.123:5022/blobs"
+	$CustomCDN::CDN_to_clients = "123.123.12.123:28000/blobs"
 
 get your public ip address by google searching "what is my ip", and google should tell you (may have to scroll a little)
