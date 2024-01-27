@@ -14,5 +14,10 @@ BLCacheParser:
 Requires clients and the server to have the add-on Support_CustomCDN by Queuenard
 	https://blocklandglass.com/addons/addon/1580
 
-at the top of [Support_CustomCDN/server.cs] add:
+at the top of [Support_CustomCDN/server.cs] fill in your ip address and port, and add:
 $CustomCDN::CDN_to_clients = "serversPublicIpAddress:port/blobs";
+
+example:
+	$CustomCDN::CDN_to_clients = "123.123.12.123:5022/blobs"
+
+get your public ip address by google searching "what is my ip", and google should tell you (may have to scroll a little)
