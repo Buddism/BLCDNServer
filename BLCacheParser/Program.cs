@@ -23,7 +23,17 @@ static class CDNCacheParser
 		}
 
 		//create the blobs in the folder with the executable
-		System.IO.Directory.CreateDirectory("blobs");
+		try
+		{
+			string? executableWorkingPath = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly()?.Location);
+			if (executableWorkingPath != null)
+				Directory.SetCurrentDirectory(executableWorkingPath);
+
+			Directory.CreateDirectory("blobs");
+		} catch(Exception ex)
+		{
+			Console.Write(ex);
+		}
 
 		int badCompressionCount = 0;
 		int items_parsed = 0;
