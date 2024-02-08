@@ -9,8 +9,7 @@ BLFileServer:
 BLCacheParser:
 	converts a cache.db into a folder (blobs/) full of the compressed .bz2 format (the format bl uses for cdn) of each file in the cache
 	1: drag and drop cache.db ontop of BLCacheParser
-	2: it will create blobs/ where cache.db is located
-	3: move it into the folder with BLFileServer
+	2: it will create blobs/ where the executable is located
 
 Requires clients and the server to have the add-on Support_CustomCDN by Queuenard
 	https://blocklandglass.com/addons/addon/1580
