@@ -2,7 +2,7 @@ prebuilt executables are contained https://github.com/Buddism/BLCDNServer/releas
 BLCacheParser/ and BLFileServer/ contain source code
 
 BLFileServer: 
-	hosts the file server binding on the ip and port in appsettings.json, 0.0.0.0 is ALL bindable ips
+	hosts the file server binding on the ip and port in appsettings.json, 0.0.0.0 is ALL bindable ips, if you change this it should use your local ip
 	need to port forward the port 28000 (OR THE ONE BL USES) (BOTH TCP+UDP) or the one you set in appsettings.json
 	if players can join your server without you port forwarding you might not need to port forward (blocklands UPNP opens both TCP and UDP)
 
